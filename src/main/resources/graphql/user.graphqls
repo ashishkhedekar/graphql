@@ -1,0 +1,25 @@
+type User
+{
+    id: ID!
+    name: String
+    city: String
+    account: Account
+
+    totalBalance: Float
+}
+
+type Account
+{
+    accountType: String
+    balance: Float
+    dues: Float
+}
+
+type Query {
+    userDetails (id: ID!): [User]
+}
+
+schema {
+    query: Query
+}
+
